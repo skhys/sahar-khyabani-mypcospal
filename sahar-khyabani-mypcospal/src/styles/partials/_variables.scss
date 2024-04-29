@@ -1,0 +1,76 @@
+//BREAKPOINTS
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+//PRIMARY
+$black: #13182c;
+$teal: #48bec8;
+$white: #ffffff;
+
+//SECONDARY
+$purple: #ad51be;
+$darkteal: #17928c;
+
+// MARGINS COLUMNS & GUTTERS
+$desktop-margin: auto;
+$desktop-column: 63px;
+$desktop-gutter: 24px;
+
+$tablet-margin: 36px;
+$tablet-column: auto;
+$tablet-gutter: 24px;
+
+$mobile-margin: 16px;
+$mobile-column: auto;
+$mobile-gutter: 16px;
+
+// FORM FIELDS
+$desktop-form-field-height: 38px;
+$form-field-height: 36px;
+$form-field-width: 100%;
+$form-field-padding: 16px;
+$form-field-spacing: 4px;
+$form-field-border-radius: 20px;
+
+//LINE HEIGHTS
+$h1-line-height-mobile: 36px;
+$h1-line-height-desktop: 40px;
+$h2-line-height-mobile: 28px;
+$h2-line-height-desktop: 32px;
+$h3-line-height-mobile: 20px;
+$h3-line-height-desktop: 22px;
+$h4-line-height-mobile: 16px;
+$h4-line-height-desktop: 18px;
+$p1l-line-height-mobile: 26px;
+$p1l-line-height-desktop: 28px;
+$p1m-line-height-mobile: 20px;
+$p1m-line-height-desktop: 22px;
+$p1s-line-height-mobile: 16px;
+$p1s-line-height-desktop: 18px;
+
+//CTA
+$text-link-chevron-spacing: 4px;
+
+$font-path: "/fonts/";
+$titillium-font-family: "titillium";
+$font1: 400;
+$font2: 600;
+
+//mobile
+$h1m: 28px;
+$h2m: 20px;
+$h3m: 13px;
+$lbtnm: 13px; //btn label
+$h4m: 11px; //table header
+$p1m: 15px; // body large
+$p2m: 13px; // body medium
+$p3m: 11px; // body small
+
+//desktop tablet
+$h1d: 32px;
+$h2d: 24px;
+$h3d: 14px; // btn label
+$h4d: 12px; //table header
+$p1d: 16px; // body large
+$p2d: 14px; // body medium
+$p3d: 12px; // body small
