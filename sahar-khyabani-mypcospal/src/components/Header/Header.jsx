@@ -9,11 +9,11 @@ function Header() {
       <div className="header">
       <div className="header__image-hero">
         </div>
-        <div className="header__group">
+        {/* <div className="header__group">
           <section className="header__details">
             <button className="header__btn">Log Symptoms</button>
           </section>
-        </div>
+        </div> */}
       </div>
     </>
   );

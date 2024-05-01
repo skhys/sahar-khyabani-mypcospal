@@ -101,7 +101,7 @@ function Form() {
 
   return (
     <div className="App">
-      <h1 className="header-title">MyPCOSPal</h1>
+      {/* <h1 className="header-title">MyPCOSPal</h1> */}
       <form className="form-container" onSubmit={handleSubmit}>
         <div className="form-section">
           <label className="form-label" htmlFor="date">
