@@ -1,9 +1,15 @@
-import './App.scss';
+import React from "react";
+import "./App.scss";
+import Header from "../src/components/Header/Header"; 
+import Form from "../src/components/Form/Form";
 
 function App() {
   return (
     <div className="App">
-      <h1>hello world!</h1>
+      <Header />
+      <main>
+        <Form />
+      </main>
     </div>
   );
 }

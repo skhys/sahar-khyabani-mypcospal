@@ -1,1 +1,47 @@
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/typography" as *;
+@use "./styles/partials/variables" as *;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: $avenir;
+  margin: 0;
+  position: relative;
+  background-color: $transparent;
+}
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+  margin: 16px;
+  padding: 0;
+  color: $white;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+}
+// input,
+// label,
+// textarea {
+//   display: block;
+// }

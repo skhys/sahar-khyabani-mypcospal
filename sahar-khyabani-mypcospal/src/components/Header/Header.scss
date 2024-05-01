@@ -1,0 +1,61 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  &__group {
+    width: 100%;
+    max-width: 800px; 
+
+    .header__details {
+      text-align: center; 
+
+      .header__title {
+        // Styles for title
+      }
+      .header__subtitle {
+        // Styles for subtitle
+      }
+      .header__btn {
+        // Styles for button
+      }
+    }
+  }
+
+  &__image-hero {
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto; 
+
+    
+    background-image: url("../../../assets/images/logo.png");
+    background-size: cover; 
+    background-position: center; 
+    height: 200px; 
+  }
+
+  @include tablet {
+    flex-direction: row;
+
+    .header__group {
+      width: 50%; 
+    }
+
+    .header__image-hero {
+      width: 50%; 
+    }
+  }
+
+  @include desktop {
+    .header__group {
+      width: 60%; 
+    }
+
+    .header__image-hero {
+      width: 40%; 
+    }
+  }
+}
