@@ -13,7 +13,7 @@ function Form() {
     event.preventDefault();
 
     try {
-      const response = await fetch("/api/date", {
+      const response = await fetch("http://localhost:8080/api/date", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -26,11 +26,10 @@ function Form() {
       }
 
       const data = await response.json();
-      setSubmissionMessage(data.message);
-
-      alert("Form submitted successfully!");
+      setSubmissionMessage(data.message || "Form submitted successfully!");
     } catch (error) {
       console.error("Error submitting form data:", error.message);
+      setSubmissionMessage("An error occurred while submitting the form");
     }
   };
 
@@ -47,15 +46,15 @@ function Form() {
     "Energetic",
   ];
   const symptomOptions = [
-    "Irregular periods",
+    "Irregular Periods",
     "Acne",
     "Fatigue",
-    "Hair loss",
+    "Hair Loss",
     "Brain Fog",
-    "Mood swings",
+    "Mood Swings",
     "Hirsutism",
-    "Sleep problems",
-    "Digestive issues",
+    "Sleep Problems",
+    "Digestive Issues",
     "Headaches",
   ];
   const activityOptions = [
@@ -66,7 +65,7 @@ function Form() {
     "Dancing",
     "Running/Jogging",
     "Meditating",
-    "Weightlifting",
+    "Weight Lifting",
     "Hiking",
     "Didn't Exercise",
   ];
@@ -74,11 +73,7 @@ function Form() {
   const handleCheckboxChange = (option, category) => {
     switch (category) {
       case "mood":
-        setMood((prevMood) =>
-          prevMood.includes(option)
-            ? prevMood.filter((mood) => mood !== option)
-            : [...prevMood, option]
-        );
+        setMood(option);
         break;
       case "symptoms":
         setSymptoms((prevSymptoms) =>
