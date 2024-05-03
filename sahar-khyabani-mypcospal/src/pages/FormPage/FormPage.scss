@@ -1,0 +1,85 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+// .header-title {
+//   text-align: center;
+// }
+
+.App {
+    margin:0;
+  .form-container {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // width: 80%;
+    margin: 16px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80%;
+        margin: 16px;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+  }
+
+  .form-section {
+    flex: 1 0 30%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    &__label {
+      margin-bottom: 5px;
+      font-weight: 600;
+      display: flex;
+    }
+
+    &__input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    &__textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    &__checkbox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    &__checkbox input[type="checkbox"] {
+      margin-right: 5px;
+    }
+  }
+
+  .form-submit {
+    flex: 1 0 100%;
+    padding: 10px;
+    background-color: $teal;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $darkteal;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Form.scss";
+import "./FormPage.scss";
 
 function Form() {
   const [date, setDate] = useState("");
