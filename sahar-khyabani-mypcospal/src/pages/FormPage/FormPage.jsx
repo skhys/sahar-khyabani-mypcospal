@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 import "./FormPage.scss";
 
 function Form() {
@@ -8,6 +9,7 @@ function Form() {
   const [activities, setActivities] = useState([]);
   const [comment, setComment] = useState("");
   const [submissionMessage, setSubmissionMessage] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -27,6 +29,10 @@ function Form() {
 
       const data = await response.json();
       setSubmissionMessage(data.message || "Form submitted successfully!");
+
+      setTimeout(() => {
+        setSubmitted(true);
+      }, 2000);
     } catch (error) {
       console.error("Error submitting form data:", error.message);
       setSubmissionMessage("An error occurred while submitting the form");
@@ -55,7 +61,7 @@ function Form() {
     "Hirsutism",
     "Sleep Problems",
     "Digestive Issues",
-    "Headaches",
+    "Headache",
   ];
   const activityOptions = [
     "Yoga",
@@ -93,6 +99,10 @@ function Form() {
         break;
     }
   };
+
+  if (submitted) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className="App">

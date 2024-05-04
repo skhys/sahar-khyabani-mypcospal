@@ -14,13 +14,13 @@
       text-align: center; 
 
       .header__title {
-        // Styles for title
+        
       }
       .header__subtitle {
-        // Styles for subtitle
+        
       }
       .header__btn {
-        // Styles for button
+        
       }
     }
   }
@@ -34,7 +34,7 @@
     background-image: url("../../../assets/images/logo.png");
     background-size: cover; 
     background-position: center; 
-    height: 200px; 
+    height: 140px; 
   }
 
   @include tablet {

@@ -19,7 +19,6 @@ function HomePage() {
       }
       const data = await response.json();
       setEntries(data);
-      console.log(data);
       setLoading(false);
     } catch (error) {
       console.error("Error fetching entries:", error.message);
@@ -41,22 +40,33 @@ function HomePage() {
   return (
     <div className="header__group">
       <section className="header__details">
+      <div className="header__image" alt="hero img">
+        </div>
         <Link to="/form">
           <button className="header__btn">+ Log Symptoms</button>
         </Link>
         <div>
-          <h2>Entries</h2>
+          <h2 className="entries__title">Entries</h2>
           {loading ? (
             <p>Loading...</p>
           ) : (
-            <div>
+            <div className="entries__container">
               {entries.map((entry, index) => (
                 <div key={index} className="entry">
-                  <p>Date: {new Date(entry.date).toLocaleDateString()}</p>
-                  <p>Mood: {entry.mood}</p>
-                  <p>Symptoms: {renderList(entry.symptoms)}</p>
-                  <p>Activities: {renderList(entry.activities)}</p>
-                  <p>Notes: {entry.notes || "N/A"}</p>
+                    <p className="entry__title">Date:</p>
+                  <p className="entry__date">
+                    {new Date(entry.date).toLocaleDateString()}
+                  </p>
+                  <p className="entry__mood">Mood: {entry.mood}</p>
+                  <p className="entry__symptoms">
+                    Symptoms: {renderList(entry.symptoms)}
+                  </p>
+                  <p className="entry__activities">
+                    Activities: {renderList(entry.activities)}
+                  </p>
+                  <p className="entry__notes">
+                    Notes: {entry.notes || "N/A"}
+                  </p>
                 </div>
               ))}
             </div>
