@@ -176,7 +176,7 @@ function Form() {
             id="comment"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-            placeholder="Add any additional notes..."
+            placeholder="Add any notes..."
           />
         </div>
         <button className="form-submit" type="submit">
