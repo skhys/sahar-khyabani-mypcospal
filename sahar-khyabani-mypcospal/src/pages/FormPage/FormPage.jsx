@@ -106,10 +106,9 @@ function Form() {
 
   return (
     <div className="App">
-      {/* <h1 className="header-title">MyPCOSPal</h1> */}
       <form className="form-container" onSubmit={handleSubmit}>
         <div className="form-section">
-          <label className="form-label" htmlFor="date">
+          <label className="form-label__legend" htmlFor="date">
             Date:
           </label>
           <input
@@ -121,8 +120,8 @@ function Form() {
           />
         </div>
         <div className="form-section">
-          <label className="form-label" htmlFor="mood">
-            How I'm feeling:
+          <label className="form-label__legend" htmlFor="mood">
+            How I'm Feeling:
           </label>
           <select
             className="form-select"
@@ -139,7 +138,7 @@ function Form() {
           </select>
         </div>
         <div className="form-section">
-          <legend className="form-label">Symptoms:</legend>
+          <legend className="form-label__legend">Symptoms:</legend>
           {symptomOptions.map((option, index) => (
             <label key={index} className="form-label">
               <input
@@ -154,7 +153,7 @@ function Form() {
           ))}
         </div>
         <div className="form-section">
-          <legend className="form-label">Activities:</legend>
+          <legend className="form-label__legend">Activities:</legend>
           {activityOptions.map((option, index) => (
             <label key={index} className="form-label">
               <input
@@ -169,7 +168,7 @@ function Form() {
           ))}
         </div>
         <div className="form-section">
-          <label className="form-label" htmlFor="comment">
+          <label className="form-label__legend" htmlFor="comment">
             Notes:
           </label>
           <textarea
