@@ -30,14 +30,15 @@
     background-color: $teal;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 80px;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     margin-bottom: 20px;
     margin-top: 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 15px;
 
     &:hover {
       background-color: $darkteal;
@@ -86,6 +87,12 @@
   margin-bottom: 20px;
   flex: 1 1 100%;
   max-width: 800px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
 
   &__title {
     font-weight: 600;
