@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import Header from "../src/components/Header/Header";
+import Footer from "../src/components/Footer/Footer";
 import FormPage from "../src/pages/FormPage/FormPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/form" element={<FormPage />} />
           <Route path="*" element={<h1>404 not found</h1>} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
